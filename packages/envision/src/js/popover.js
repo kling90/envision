@@ -298,7 +298,7 @@ class Popover {
       if (this.config.clickOutside) {
          document.body.removeEventListener('click', this.clickOutsideHandler);
       }
-      document.removeEventListener('keydown', this.handleKeyboardEvent);
+      document.removeEventListener('keyup', this.handleKeyboardEvent);
       this.isShowing = false;
    }
 
@@ -337,7 +337,7 @@ class Popover {
             document.body.addEventListener('click', this.clickOutsideHandler);
          }
 
-         document.addEventListener('keydown', this.handleKeyboardEvent);
+         document.addEventListener('keyup', this.handleKeyboardEvent);
          this.isShowing = true;
       });
    }
