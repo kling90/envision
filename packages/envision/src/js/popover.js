@@ -27,6 +27,7 @@ const DEFAULTS = {
    delay: 0,
    escapeContent: true,
    placement: 'top',
+   insertAfterElement: false,
    template: (
       containerModifier,
       contentClassName
@@ -263,22 +264,6 @@ class Popover {
       );
    }
 
-   hasFocusableContent() {
-      const SELECTOR = [
-         'a[href]',
-         'area[href]',
-         'input:not([disabled])',
-         'select:not([disabled])',
-         'textarea:not([disabled])',
-         'button:not([disabled])',
-         'details:not([disabled])',
-         'summary:not([disabled])',
-         '[tabindex]:not([tabindex="-1"]):not([disabled])',
-         '[contenteditable]',
-      ].join(',');
-      return this.getPopoverElement().querySelectorAll(SELECTOR).length > 0;
-   }
-
    updateConfig(config) {
       Object.assign(this.config, config);
       return this;
@@ -307,7 +292,7 @@ class Popover {
       const popoverElement = this.getPopoverElement();
       this.el.setAttribute('aria-describedby', this.popoverElement.id);
 
-      if (this.hasFocusableContent()) {
+      if (this.config.insertAfterElement) {
          this.el.insertAdjacentElement('afterend', popoverElement);
       } else {
          document.body.appendChild(popoverElement);
