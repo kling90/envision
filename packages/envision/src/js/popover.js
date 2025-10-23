@@ -91,9 +91,19 @@ class Popover {
       }
    }
 
+   handleKeyEscape(e) {
+      const { target } = e;
+      const popoverElement = this.getPopoverElement();
+
+      this.hide();
+      if (popoverElement.contains(target)) {
+         setTimeout(() => this.el.focus(), 0);
+      }
+   }
+
    handleKeyboardEvent(e) {
       if (e.key === 'Escape') {
-         this.hide();
+         this.handleKeyEscape(e);
       }
    }
 
@@ -253,6 +263,22 @@ class Popover {
       );
    }
 
+   hasFocusableContent() {
+      const SELECTOR = [
+         'a[href]',
+         'area[href]',
+         'input:not([disabled])',
+         'select:not([disabled])',
+         'textarea:not([disabled])',
+         'button:not([disabled])',
+         'details:not([disabled])',
+         'summary:not([disabled])',
+         '[tabindex]:not([tabindex="-1"]):not([disabled])',
+         '[contenteditable]',
+      ].join(',');
+      return this.getPopoverElement().querySelectorAll(SELECTOR).length > 0;
+   }
+
    updateConfig(config) {
       Object.assign(this.config, config);
       return this;
@@ -272,7 +298,7 @@ class Popover {
       if (this.config.clickOutside) {
          document.body.removeEventListener('click', this.clickOutsideHandler);
       }
-      document.removeEventListener('keyup', this.handleKeyboardEvent);
+      document.removeEventListener('keydown', this.handleKeyboardEvent);
       this.isShowing = false;
    }
 
@@ -281,7 +307,11 @@ class Popover {
       const popoverElement = this.getPopoverElement();
       this.el.setAttribute('aria-describedby', this.popoverElement.id);
 
-      document.body.appendChild(popoverElement);
+      if (this.hasFocusableContent()) {
+         this.el.insertAdjacentElement('afterend', popoverElement);
+      } else {
+         document.body.appendChild(popoverElement);
+      }
 
       getPopper().then((createPopper) => {
          this._popper = createPopper(this.el, popoverElement, {
@@ -307,8 +337,7 @@ class Popover {
             document.body.addEventListener('click', this.clickOutsideHandler);
          }
 
-         document.addEventListener('keyup', this.handleKeyboardEvent);
-
+         document.addEventListener('keydown', this.handleKeyboardEvent);
          this.isShowing = true;
       });
    }
