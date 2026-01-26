@@ -11,10 +11,10 @@ Sizing · Envision by Sitevision
 <link href="/favicon.ico" rel="icon" sizes="48x48">
 <link href="/images/favicon.svg" rel="icon" sizes="any" type="image/svg+xml">
 <link href="/images/apple-touch-icon.png" rel="apple-touch-icon">
-<meta content="Astro v5.16.0" name="generator" data-template="default">
+<meta content="Astro v5.16.8" name="generator" data-template="default">
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" crossorigin="anonymous" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="></script>
-<script src="/dist/envision.js?v=77f0039"></script>
-<link href="/assets/docs.Be3U9i_z.css" rel="stylesheet"></head>
+<script src="/dist/envision.js?v=af79c1d"></script>
+<link href="/assets/docs.BEak-PRQ.css" rel="stylesheet"></head>
 <body>
 <div class="layout">
 <header class="header">
@@ -90,74 +90,79 @@ Menu
 <h1 class="doc-main-heading">
 Sizing
 </h1>
-<p class="doc-p">Sizing utility classes are available for width and height. Classes are named using the the format: <code class="doc-code">env-{property}--{size}</code></p>
-<p class="doc-p">Valid values for <em class="doc-em">property</em></p>
+<p class="doc-p">Sizing utilities provide classes for defining an element’s width and height.</p>
+<h2 class="doc-heading-2" id="usage">Usage</h2>
+<p class="doc-p">Use sizing utilities to define an element’s width or height using preset values.</p>
+<p class="doc-p">Classes follow the pattern <code class="doc-code">env-{property}--{size}</code>.</p>
+<h3 class="doc-heading-3" id="valid-values">Valid values</h3>
+<h4 class="doc-heading-4" id="property">{property}</h4>
 <ul class="doc-list">
-<li class="doc-list__item"><code class="doc-code">w</code> for <code class="doc-code">width</code></li>
-<li class="doc-list__item"><code class="doc-code">h</code> for <code class="doc-code">height</code></li>
+<li class="doc-list__item"><code class="doc-code">w</code> <small>(width)</small></li>
+<li class="doc-list__item"><code class="doc-code">h</code> <small>(height)</small></li>
 </ul>
-<p class="doc-p">Valid values for <em class="doc-em">size</em> (%)</p>
+<h4 class="doc-heading-4" id="size">{size}</h4>
+<p class="doc-p">Available values are percentage-based:</p>
 <ul class="doc-list">
 <li class="doc-list__item"><code class="doc-code">25</code></li>
 <li class="doc-list__item"><code class="doc-code">50</code></li>
 <li class="doc-list__item"><code class="doc-code">75</code></li>
 <li class="doc-list__item"><code class="doc-code">100</code></li>
 </ul>
-<p class="doc-p">Examples <code class="doc-code">width</code></p>
+<h3 class="doc-heading-3" id="width-examples">Width examples</h3>
 <div class="doc-code-example"><div class="example-sizing">
-<div class="env-p-around--x-small env-m-bottom--small env-w--25">25%</div>
-<div class="env-p-around--x-small env-m-bottom--small env-w--50">50%</div>
-<div class="env-p-around--x-small env-m-bottom--small env-w--75">75%</div>
-<div class="env-p-around--x-small env-w--100">100%</div>
+<div class="env-p--x-small env-m-block-end--small env-w--25">25%</div>
+<div class="env-p--x-small env-m-block-end--small env-w--50">50%</div>
+<div class="env-p--x-small env-m-block-end--small env-w--75">75%</div>
+<div class="env-p--x-small env-w--100">100%</div>
 </div></div>
 <div class="doc-code-block doc-code-block--expandable">
 <pre class="language-html" data-language="html"><code class="language-html" is:raw=""><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example-sizing<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-w--25 env-p-around--x-small env-m-bottom--small<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>25%<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-w--50 env-p-around--x-small env-m-bottom--small<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>50%<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-w--75 env-p-around--x-small env-m-bottom--small<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>75%<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-w--100 env-p-around--x-small<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>100%<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-w--25 env-p--x-small env-m-block-end--small<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>25%<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-w--50 env-p--x-small env-m-block-end--small<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>50%<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-w--75 env-p--x-small env-m-block-end--small<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>75%<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-w--100 env-p--x-small<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>100%<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
 </code></pre>
 </div><!--/sv-no-index-->
-<p class="doc-p">Examples <code class="doc-code">height</code></p>
+<h3 class="doc-heading-3" id="height-examples">Height examples</h3>
 <div class="doc-code-example"><div class="example-sizing-h">
-<div class="env-p-around--x-small env-d--inline-block env-m-right--small env-h--25">
+<div class="env-p--x-small env-d--inline-block env-m-inline-end--small env-h--25">
 25%
 </div>
-<div class="env-p-around--x-small env-d--inline-block env-m-right--small env-h--50">
+<div class="env-p--x-small env-d--inline-block env-m-inline-end--small env-h--50">
 50%
 </div>
-<div class="env-p-around--x-small env-d--inline-block env-m-right--small env-h--75">
+<div class="env-p--x-small env-d--inline-block env-m-inline-end--small env-h--75">
 75%
 </div>
-<div class="env-p-around--x-small env-d--inline-block env-h--100">100%</div>
+<div class="env-p--x-small env-d--inline-block env-h--100">100%</div>
 </div></div>
 <div class="doc-code-block doc-code-block--expandable">
 <pre class="language-html" data-language="html"><code class="language-html" is:raw=""><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example-sizing-h<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span>
-      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-h--25 env-p-around--x-small env-m-right--small env-d--inline-block<span class="token punctuation">"</span></span>
+      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-h--25 env-p--x-small env-m-inline-end--small env-d--inline-block<span class="token punctuation">"</span></span>
    <span class="token punctuation">></span></span>
       25%
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span>
-      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-h--50 env-p-around--x-small env-m-right--small env-d--inline-block<span class="token punctuation">"</span></span>
+      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-h--50 env-p--x-small env-m-inline-end--small env-d--inline-block<span class="token punctuation">"</span></span>
    <span class="token punctuation">></span></span>
       50%
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span>
-      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-h--75 env-p-around--x-small env-m-right--small env-d--inline-block<span class="token punctuation">"</span></span>
+      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-h--75 env-p--x-small env-m-inline-end--small env-d--inline-block<span class="token punctuation">"</span></span>
    <span class="token punctuation">></span></span>
       75%
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-h--100 env-p-around--x-small env-d--inline-block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>100%<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-h--100 env-p--x-small env-d--inline-block<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>100%<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
 </code></pre>
 </div><!--/sv-no-index-->
-<p class="doc-p">Utility classes are also available for <code class="doc-code">max-width:100%</code> and <code class="doc-code">max-height:100%</code> and are named using the format: <code class="doc-code">env-m{property}--100</code></p>
-<p class="doc-p">Valid values for <em class="doc-em">property</em></p>
+<h2 class="doc-heading-2" id="max-size">Max size</h2>
+<p class="doc-p">Utility classes are also available for constraining elements to their container:</p>
 <ul class="doc-list">
-<li class="doc-list__item"><code class="doc-code">w</code> for <code class="doc-code">width</code></li>
-<li class="doc-list__item"><code class="doc-code">h</code> for <code class="doc-code">height</code></li>
+<li class="doc-list__item"><code class="doc-code">env-mw--100</code> <small>(max-width)</small></li>
+<li class="doc-list__item"><code class="doc-code">env-mh--100</code> <small>(max-height)</small></li>
 </ul>
 </div>
 </main>
@@ -317,9 +322,6 @@ Basic text
 </li><li class="env-nav__item">
 <a href="/typography/text/" class="env-nav__link level-2" aria-current="false">
 Content text
-<span class="doc-badge doc-badge--success">
-New
-</span>
 </a>
 </li><li class="env-nav__item">
 <a href="/typography/dynamic-font-size/" class="env-nav__link level-2" aria-current="false">
@@ -362,16 +364,10 @@ Button group
 </li><li class="env-nav__item">
 <a href="/forms/form-elements/" class="env-nav__link level-2" aria-current="false">
 Form elements
-<span class="doc-badge doc-badge--success">
-New
-</span>
 </a>
 </li><li class="env-nav__item">
 <a href="/forms/form-layout/" class="env-nav__link level-2" aria-current="false">
 Form layout
-<span class="doc-badge doc-badge--success">
-New
-</span>
 </a>
 </li><li class="env-nav__item">
 <a href="/forms/range-slider/" class="env-nav__link level-2" aria-current="false">
@@ -614,6 +610,6 @@ Widget typography
 </div>
 <script type="module">((e,d,t)=>{const c=window.matchMedia("(prefers-color-scheme: dark)"),o=c=>{c?d.classList.add(t):d.classList.remove(t),e.sessionStorage.setItem("colorscheme",c?t:"doc-light-mode")};document.addEventListener("DOMContentLoaded",()=>{document.getElementById("darkMode").addEventListener("change",e=>{o(e.target.checked)})}),c.addEventListener("change",()=>{o(c.matches),document.getElementById("darkMode").checked=c.matches})})(window,document.documentElement,"doc-dark-mode")</script>
 <script type="module">document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".mobile-nav-button button"),t=document.querySelector(".mobileNav"),o=document.querySelector(".mobileNav__close");let n=!1;const r=function(e){return!!(e.offsetWidth||e.offsetHeight||e.getClientRects().length)},d=function(e){const t=["a[href]","input:not([disabled])","button:not([disabled])"].join(","),o=e.querySelectorAll(t),n=[];for(let e=0;e<o.length;e++)r(o[e])&&n.push(o[e]);return n},s=e=>{if("Escape"===e.key)e.preventDefault(),l();else if("Tab"===e.key){const o=d(t),n=o[0],r=o[o.length-1];e.shiftKey?e.target===n&&(e.preventDefault(),r.focus()):e.target===r&&(e.preventDefault(),n.focus())}},l=()=>{n?(e.setAttribute("aria-expanded","false"),t.classList.remove("show"),document.body.style.removeProperty("overflow"),document.body.removeEventListener("keydown",s),e.focus()):(e.setAttribute("aria-expanded","true"),t.classList.add("show"),document.body.style.setProperty("overflow-x",""),document.body.style.setProperty("overflow-y",""),document.body.style.setProperty("overflow","hidden","important"),document.body.addEventListener("keydown",s),d(t)[1].focus()),n=!n};o&&o.addEventListener("click",l),e&&e.addEventListener("click",l)})</script>
-<script type="module" src="/assets/docs.Cp76KoTq.js"></script>
+<script type="module" src="/assets/docs.74IWxkn_.js"></script>
 <script type="module">const b=(()=>{let e=0;const t=()=>(e+=1,"env-"+e);return e=>{if(!e.id){let n=t();for(;document.getElementById(n);)n=t();e.id=n}}})();document.addEventListener("DOMContentLoaded",()=>{const e={html:"Example HTML code",javascript:"Example JavaScript code",unknown:"Example code"};document.body.querySelectorAll(".astro-code[data-language]").forEach(t=>{let n=t.dataset.language?.toLowerCase()||"";n.includes("html")&&(n="html"),Object.hasOwnProperty.call(e,n)||(n="unknown"),t.querySelector("code")?.setAttribute("aria-label",e[n])});const t="doc-code-block--hidden",n=["doc-code-block__toggler","env-button","env-button--link","env-button--icon","env-button--icon-after","env-button--secondary","env-button--small"],o="Show full example";document.body.querySelectorAll(".doc-code-block--expandable").forEach(e=>{const a="PRE"===e.tagName?e:e.querySelector("pre");if(a&&a.clientHeight>.25*window.innerHeight){b(e),e.classList.add(t);const a=document.createElement("span");a.textContent=o;const c=document.createElement("button");c.insertAdjacentHTML("afterbegin",'<svg class="env-icon env-icon--small">\n                <use xlink:href="/sitevision/envision-icons.svg#icon-angle-down">\n                </use></svg>'),c.setAttribute("type","button"),c.setAttribute("aria-expanded","false"),c.classList.add(...n),c.setAttribute("aria-controls",e.id),c.appendChild(a),e.appendChild(c),c.addEventListener("click",()=>{const n="true"===c.getAttribute("aria-expanded");n?(e.classList.add(t),setTimeout(()=>{e.scrollIntoView({behavior:"auto",block:"center"})},1),a.textContent=o):(e.classList.remove(t),a.textContent="Hide full example"),c.setAttribute("aria-expanded",!n)})}})})</script>
 </body></html>
