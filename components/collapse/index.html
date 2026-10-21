@@ -6,29 +6,68 @@
 Collapse · Envision by Sitevision
 </title>
 <meta content="width=device-width,initial-scale=1" name="viewport">
-<meta content="The Collapse component toggles content visibility, allowing sections to expand or collapse as needed." name="description">
+<meta content="The Collapse component is used to show and hide content through a trigger element." name="description">
 <link href="/llms.txt" rel="alternate" type="text/plain">
 <link href="/llms-full.txt" rel="alternate" type="text/plain">
-<script>((e,o,t)=>{const c=e.sessionStorage,d=c.getItem(t);let s;d?s=d:(s=e.matchMedia("(prefers-color-scheme: dark)").matches?"doc-dark-mode":"doc-light-mode",c.setItem(t,s)),o.classList.add(s)})(window,document.documentElement,"colorscheme")</script>
-<link href="/favicon.ico" rel="icon" sizes="48x48">
+<script>((e,o,t)=>{const c=e.sessionStorage,d=c.getItem(t);let s;d?s=d:(s=e.matchMedia("(prefers-color-scheme: dark)").matches?"doc-dark-mode":"doc-light-mode",c.setItem(t,s)),o.classList.add(s)})(window,document.documentElement,"colorscheme")</script><link href="/favicon.ico" rel="icon" sizes="48x48">
 <link href="/images/favicon.svg" rel="icon" type="image/svg+xml" sizes="any">
 <link href="/images/apple-touch-icon.png" rel="apple-touch-icon">
-<meta content="Astro v6.1.5" name="generator" data-template="default">
-<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" crossorigin="anonymous" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="></script>
-<script src="/dist/envision.js?v=e468c86"></script>
-<link href="/assets/docs.DD6ruaso.css" rel="stylesheet"></head>
+<meta content="Astro v7.2.8" name="generator" data-template="default">
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" crossorigin="anonymous" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="></script><script src="/dist/envision.js?v=2cddabe"></script>
+<link href="/assets/docs._o5mn4nt.css" rel="stylesheet"></head>
 <body>
 <div class="layout">
 <header class="header">
 <a href="#content" class="doc-skip-link"> Skip to main content </a>
-<div class="container">
-<a href="/" class="logo">
+<div class="header-grid">
+<div class="header-grid-item-logo">
+<a href="/" class="logo header-logo">
 <span class="env-assistive-text">To start page</span>
 <svg class="env-icon doc-svg-logo" aria-hidden="true">
 <use href="/images/docs-logo.svg#logo"></use>
 </svg>
 </a>
-<nav aria-label="Main menu">
+</div>
+<div class="header-grid-item-search">
+<div class="doc-search" role="search" aria-label="Search Envision documentation">
+<pagefind-config base-url="/" bundle-path="/pagefind/" excerpt-length="40"></pagefind-config>
+<pagefind-searchbox placeholder="Search Envision documentation"></pagefind-searchbox>
+</div>
+</div>
+<div class="header-grid-item-buttons">
+<div class="theme-picker">
+<label class="env-assistive-text theme-picker__label" for="darkMode">
+Default / Dark mode
+</label>
+<div class="doc-theme-switch">
+<input class="doc-theme-switch__checkbox" id="darkMode" type="checkbox">
+<svg class="env-icon doc-theme-switch__moon" aria-hidden="true" height="24" width="24">
+<use href="/images/docs-images.svg#moon"></use>
+</svg>
+<svg class="env-icon doc-theme-switch__sun" aria-hidden="true" height="24" width="24">
+<use href="/images/docs-images.svg#sun"></use>
+</svg>
+</div>
+<script>"doc-dark-mode"===sessionStorage.getItem("colorscheme")&&(document.getElementById("darkMode").checked=!0)</script></div>
+<div class="mobile-search-button">
+<button class="env-button env-button--icon env-button--link">
+<svg class="env-icon env-icon--xx-small">
+<use href="/sitevision/envision-icons.svg#icon-search"></use>
+</svg>
+Search
+</button>
+</div>
+<div class="mobile-nav-button">
+<button class="env-button env-button--icon env-button--link">
+<svg class="env-icon env-icon--xx-small">
+<use href="/sitevision/envision-icons.svg#icon-menu-line"></use>
+</svg>
+Menu
+</button>
+</div>
+</div>
+</div>
+<nav aria-label="Main menu" class="header-nav">
 <ul class="env-nav env-nav--border env-nav--menubar">
 <li class="env-nav__item">
 <a href="/colors/" class="env-nav__link" aria-current="false">
@@ -61,63 +100,39 @@ Dashboard Widgets
 </li>
 </ul>
 </nav>
-<div class="theme-picker">
-<label class="env-assistive-text theme-picker__label" for="darkMode">
-Default / Dark mode
-</label>
-<div class="doc-theme-switch">
-<input class="doc-theme-switch__checkbox" id="darkMode" type="checkbox">
-<svg class="env-icon doc-theme-switch__moon" aria-hidden="true" height="24" width="24">
-<use href="/images/docs-images.svg#moon"></use>
-</svg>
-<svg class="env-icon doc-theme-switch__sun" aria-hidden="true" height="24" width="24">
-<use href="/images/docs-images.svg#sun"></use>
-</svg>
-</div>
-<script>"doc-dark-mode"===sessionStorage.getItem("colorscheme")&&(document.getElementById("darkMode").checked=!0)</script>
-</div>
-<div class="mobile-nav-button">
-<button class="env-button env-button--icon env-button--link">
-<svg class="env-icon env-icon--xx-small">
-<use href="/sitevision/envision-icons.svg#icon-menu-line"></use>
-</svg>
-Menu
-</button>
-</div>
-</div>
 </header>
 <div class="body">
-<main class="main" id="content">
+<main class="main" data-pagefind-body id="content">
 <div class="content-wrapper">
 <h1 class="doc-main-heading">
 Collapse
 </h1>
-<h2 class="doc-heading-2" id="collapsible-content">Collapsible content</h2>
+<p class="doc-p">Use Collapse when you want to show or hide a section of content. The component consists of a toggle button and a collapsible content element. The content is hidden by default and becomes visible when the toggle button is activated.</p>
+<h2 class="doc-heading-2" id="basic-example">Basic example</h2>
 <div class="doc-code-example"><h4 class="env-ui-text-sectionheading">
-<a href="#container1" class="env-link" aria-controls="container1" aria-expanded="false" data-env-collapse="" role="button">
+<a href="#collapse-1" class="env-link" aria-controls="collapse-1" aria-expanded="false" data-env-collapse="" role="button">
 Example 1
 </a>
 </h4>
-<div class="env-collapse" id="container1">
+<div class="env-collapse" id="collapse-1">
 <p class="env-text-body-02">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget lobortis dui, in accumsan augue. Quisque nec augue quam. Donec sed purus quam. Proin eu tincidunt metus.
 </p>
 </div></div>
-<div class="doc-code-block doc-code-block--expandable">
+<div class="doc-code-block doc-code-block--expandable" data-pagefind-ignore="">
 <pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>h4</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-ui-text-sectionheading<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>a</span>
       <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
       <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-link<span class="token punctuation">"</span></span>
-      <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#container1<span class="token punctuation">"</span></span>
+      <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#collapse-1<span class="token punctuation">"</span></span>
       <span class="token attr-name">data-env-collapse</span>
       <span class="token attr-name">aria-expanded</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span>
-      <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container1<span class="token punctuation">"</span></span>
+      <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse-1<span class="token punctuation">"</span></span>
    <span class="token punctuation">></span></span>
       Example 1
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>a</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>h4</span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-collapse<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-collapse<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-text-body-02<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget
       lobortis dui, in accumsan augue. Quisque nec augue quam. Donec sed purus
@@ -126,61 +141,113 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget lobortis 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
 </code></pre>
 </div><!--/sv-no-index-->
-<p class="doc-p">Add <code class="doc-code">env-collapse--show</code> to have your content expanded</p>
-<h2 class="doc-heading-2" id="background">Background</h2>
-<p class="doc-p">Add <code class="doc-code">env-collapse-header</code> to give the collapsible header a background Add <code class="doc-code">env-collapse-header--icons</code> to add icons</p>
+<h2 class="doc-heading-2" id="required-markup">Required markup</h2>
+<p class="doc-p">The collapsible content element must have:</p>
+<ul class="doc-list">
+<li class="doc-list__item"><code class="doc-code">class="env-collapse"</code></li>
+<li class="doc-list__item">a unique <code class="doc-code">id</code></li>
+</ul>
+<p class="doc-p">The toggle button element must have:</p>
+<ul class="doc-list">
+<li class="doc-list__item">Attribute <code class="doc-code">data-env-collapse</code></li>
+<li class="doc-list__item">Either <code class="doc-code">href="#id"</code> or <code class="doc-code">data-target="#id"</code><em class="doc-em">*</em></li>
+<li class="doc-list__item"><code class="doc-code">aria-controls="id"</code><em class="doc-em">*</em></li>
+<li class="doc-list__item"><code class="doc-code">aria-expanded="true|false"</code></li>
+</ul>
+<p class="doc-legend">
+<span style="font-size:1.4em">*</span> = The ID of the collapsible content element.
+</p>
+<p class="doc-p">When using an <code class="doc-code">&#x3C;a></code> element as the toggle button, also add <code class="doc-code">role="button"</code>.</p>
+<p class="doc-p">A <code class="doc-code">&#x3C;button type="button"></code> must use <code class="doc-code">data-target</code>.</p>
+<h2 class="doc-heading-2" id="styled-toggle-button">Styled toggle button</h2>
+<p class="doc-p">Use <code class="doc-code">env-collapse-header</code> to style the toggle button as an expandable section header. Add <code class="doc-code">env-collapse-header--icons</code> to display expand and collapse icons.</p>
 <div class="doc-code-example"><h4 class="env-ui-text-sectionheading">
-<a href="#container2" class="env-collapse-header env-flex env-flex--justify-content-between" aria-controls="container2" aria-expanded="false" data-env-collapse="" role="button">
-<span class="env-m-right--x-large"> Example 2 </span>
+<a href="#collapse-2" class="env-collapse-header env-flex env-flex--justify-content-between" aria-controls="collapse-2" aria-expanded="false" data-env-collapse="" role="button">
+<span class="env-m-inline-end--x-large">Example 2</span>
 <span class="env-collapse-header--icons"></span>
 </a>
 </h4>
-<div class="env-collapse" id="container2">
+<div class="env-collapse" id="collapse-2">
 <p class="env-text-body-02">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget lobortis dui, in accumsan augue. Quisque nec augue quam. Donec sed purus quam. Proin eu tincidunt metus.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </p>
 </div></div>
-<div class="doc-code-block doc-code-block--expandable">
+<div class="doc-code-block doc-code-block--expandable" data-pagefind-ignore="">
 <pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>h4</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-ui-text-sectionheading<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>a</span>
       <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-collapse-header env-flex env-flex--justify-content-between<span class="token punctuation">"</span></span>
       <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
-      <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#container2<span class="token punctuation">"</span></span>
+      <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#collapse-2<span class="token punctuation">"</span></span>
       <span class="token attr-name">data-env-collapse</span>
       <span class="token attr-name">aria-expanded</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span>
-      <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container2<span class="token punctuation">"</span></span>
+      <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse-2<span class="token punctuation">"</span></span>
    <span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-m-right--x-large<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> Example 2 <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-m-inline-end--x-large<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Example 2<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>span</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-collapse-header--icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>span</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>a</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>h4</span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-collapse<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-collapse<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-text-body-02<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget
-      lobortis dui, in accumsan augue. Quisque nec augue quam. Donec sed purus
-      quam. Proin eu tincidunt metus.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>p</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
 </code></pre>
 </div><!--/sv-no-index-->
+<h2 class="doc-heading-2" id="initially-expanded">Initially expanded</h2>
+<p class="doc-p">Add <code class="doc-code">env-collapse--show</code> to the content element if the content should be visible when the page loads.</p>
+<p class="doc-p">Add <code class="doc-code">env-collapse--expanded</code> to the toggle button. Make sure the toggle button uses
+<code class="doc-code">aria-expanded="true"</code>.</p>
+<div class="doc-code-example"><h4 class="env-ui-text-sectionheading">
+<a href="#collapse-3" class="env-collapse-header env-flex env-flex--justify-content-between env-collapse--expanded" aria-controls="collapse-3" aria-expanded="true" data-env-collapse="" role="button">
+<span class="env-m-inline-end--x-large">Example 3</span>
+<span class="env-collapse-header--icons"></span>
+</a>
+</h4>
+<div class="env-collapse env-collapse--show" id="collapse-3">
+<p class="env-text-body-02">This content is visible when the page loads.</p>
+</div></div>
+<div class="doc-code-block doc-code-block--expandable" data-pagefind-ignore="">
+<pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>h4</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-ui-text-sectionheading<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>a</span>
+      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-collapse-header env-collapse--expanded env-flex env-flex--justify-content-between<span class="token punctuation">"</span></span>
+      <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+      <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#collapse-3<span class="token punctuation">"</span></span>
+      <span class="token attr-name">data-env-collapse</span>
+      <span class="token attr-name">aria-expanded</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
+      <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse-3<span class="token punctuation">"</span></span>
+   <span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-m-inline-end--x-large<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Example 3<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-collapse-header--icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>span</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>h4</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-collapse env-collapse--show<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse-3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>env-text-body-02<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>This content is visible when the page loads.<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+</div><!--/sv-no-index-->
+<h2 class="doc-heading-2" id="initialization">Initialization</h2>
+<p class="doc-p">Toggle buttons using data-env-collapse are initialized automatically. No manual JavaScript initialization is required for standard click interactions. The component is initialized the first time it is used.</p>
+<h2 class="doc-heading-2" id="linking-to-content-inside-a-collapse-2026071">Linking to content inside a collapse <span class="doc-badge doc-badge--info">2026.07.1</span></h2>
+<p class="doc-p">If the page loads with a hash pointing to content inside a collapsed section, the section is automatically expanded so the target content becomes accessible.</p>
+<p class="doc-p">The same behavior applies when clicking a same-page anchor link that points to content inside a collapsed section.</p>
 <h2 class="doc-heading-2" id="methods">Methods</h2>
-<p class="doc-p">Show</p>
-<div class="doc-code-block doc-code-block--expandable">
+<p class="doc-p">The selector argument should target the <code class="doc-code">.env-collapse</code> content element, not the toggle button.</p>
+<h3 class="doc-heading-3" id="show">Show</h3>
+<div class="doc-code-block doc-code-block--expandable" data-pagefind-ignore="">
 <pre class="language-javascript" data-language="javascript"><code class="language-javascript">envision<span class="token punctuation">.</span><span class="token function">collapse</span><span class="token punctuation">(</span><span class="token string">'#myCollapse'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">collapses</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
    collapses<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </div><!--/sv-no-index-->
-<p class="doc-p">Hide</p>
-<div class="doc-code-block doc-code-block--expandable">
+<h3 class="doc-heading-3" id="hide">Hide</h3>
+<div class="doc-code-block doc-code-block--expandable" data-pagefind-ignore="">
 <pre class="language-javascript" data-language="javascript"><code class="language-javascript">envision<span class="token punctuation">.</span><span class="token function">collapse</span><span class="token punctuation">(</span><span class="token string">'#myCollapse'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">collapses</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
    collapses<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </div><!--/sv-no-index-->
-<p class="doc-p">Toggle</p>
-<div class="doc-code-block doc-code-block--expandable">
+<h3 class="doc-heading-3" id="toggle">Toggle</h3>
+<div class="doc-code-block doc-code-block--expandable" data-pagefind-ignore="">
 <pre class="language-javascript" data-language="javascript"><code class="language-javascript">envision<span class="token punctuation">.</span><span class="token function">collapse</span><span class="token punctuation">(</span><span class="token string">'#myCollapse'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">collapses</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
    collapses<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toggle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -402,7 +469,7 @@ Tooltip
 <div class="footer-nav-col">
 <h2 class="footer-nav-col__header">Developer</h2>
 <ul class="env-list">
-<li class="env-nav__item env-m-vertical--medium">
+<li class="env-nav__item env-m-block--medium">
 <a href="https://developer.sitevision.se/">Sitevision Developer Community</a>
 </li>
 </ul>
@@ -410,15 +477,15 @@ Tooltip
 <div class="footer-nav-col">
 <h2 class="footer-nav-col__header">Sitevision</h2>
 <ul class="env-list">
-<li class="env-nav__item env-m-vertical--medium">
+<li class="env-nav__item env-m-block--medium">
 <a href="https://www.sitevision.se/en/startpage/sitevision/about-sitevision">About Sitevision</a>
-</li><li class="env-nav__item env-m-vertical--medium">
+</li><li class="env-nav__item env-m-block--medium">
 <a href="https://www.sitevision.se/en/startpage/sitevision/contact-us">Contact us</a>
-</li><li class="env-nav__item env-m-vertical--medium">
+</li><li class="env-nav__item env-m-block--medium">
 <a href="https://www.sitevision.se/en/startpage/sitevision/become-one-of-us">Become one of us</a>
-</li><li class="env-nav__item env-m-vertical--medium">
+</li><li class="env-nav__item env-m-block--medium">
 <a href="https://www.sitevision.se/en/startpage/sitevision/privacy-statement">Privacy Statement</a>
-</li><li class="env-nav__item env-m-vertical--medium">
+</li><li class="env-nav__item env-m-block--medium">
 <a href="https://www.sitevision.se/en/startpage/sitevision/pressroom">Pressroom</a>
 </li>
 </ul>
@@ -456,20 +523,20 @@ Toggle navigation for Colors
 Basic colors
 </a>
 </li><li class="env-nav__item">
-<a href="/colors/block-colors/" class="env-nav__link level-2" aria-current="false">
-Block colors
-</a>
-</li><li class="env-nav__item">
-<a href="/colors/brand-colors/" class="env-nav__link level-2" aria-current="false">
-Brand colors
-</a>
-</li><li class="env-nav__item">
 <a href="/colors/element-colors/" class="env-nav__link level-2" aria-current="false">
 Element colors
 </a>
 </li><li class="env-nav__item">
+<a href="/colors/block-colors/" class="env-nav__link level-2" aria-current="false">
+Block colors
+</a>
+</li><li class="env-nav__item">
 <a href="/colors/status-colors/" class="env-nav__link level-2" aria-current="false">
 Status colors
+</a>
+</li><li class="env-nav__item">
+<a href="/colors/brand-colors/" class="env-nav__link level-2" aria-current="false">
+Brand colors
 </a>
 </li>
 </ul>
@@ -495,8 +562,8 @@ Basic text
 Content text
 </a>
 </li><li class="env-nav__item">
-<a href="/typography/dynamic-font-size/" class="env-nav__link level-2" aria-current="false">
-Dynamic font size
+<a href="/typography/ui-text/" class="env-nav__link level-2" aria-current="false">
+UI Text
 </a>
 </li><li class="env-nav__item">
 <a href="/typography/text-list/" class="env-nav__link level-2" aria-current="false">
@@ -506,8 +573,8 @@ New
 </span>
 </a>
 </li><li class="env-nav__item">
-<a href="/typography/ui-text/" class="env-nav__link level-2" aria-current="false">
-UI Text
+<a href="/typography/dynamic-font-size/" class="env-nav__link level-2" aria-current="false">
+Dynamic font size
 </a>
 </li>
 </ul>
@@ -539,10 +606,6 @@ Form elements
 </li><li class="env-nav__item">
 <a href="/forms/form-layout/" class="env-nav__link level-2" aria-current="false">
 Form layout
-</a>
-</li><li class="env-nav__item">
-<a href="/forms/range-slider/" class="env-nav__link level-2" aria-current="false">
-Range slider
 </a>
 </li><li class="env-nav__item">
 <a href="/forms/tag-select/" class="env-nav__link level-2" aria-current="false">
@@ -675,24 +738,8 @@ Toggle navigation for Utils
 </a>
 <ul class="env-collapse env-nav env-nav--sidenav" id="mobile-submenu-utils">
 <li class="env-nav__item">
-<a href="/utils/assistive-text/" class="env-nav__link level-2" aria-current="false">
-Assistive text
-</a>
-</li><li class="env-nav__item">
-<a href="/utils/borders/" class="env-nav__link level-2" aria-current="false">
-Borders
-</a>
-</li><li class="env-nav__item">
 <a href="/utils/css-variables/" class="env-nav__link level-2" aria-current="false">
 CSS variables
-</a>
-</li><li class="env-nav__item">
-<a href="/utils/display/" class="env-nav__link level-2" aria-current="false">
-Display
-</a>
-</li><li class="env-nav__item">
-<a href="/utils/shadows/" class="env-nav__link level-2" aria-current="false">
-Shadows
 </a>
 </li><li class="env-nav__item">
 <a href="/utils/sizing/" class="env-nav__link level-2" aria-current="false">
@@ -703,8 +750,24 @@ Sizing
 Spacing
 </a>
 </li><li class="env-nav__item">
+<a href="/utils/borders/" class="env-nav__link level-2" aria-current="false">
+Borders
+</a>
+</li><li class="env-nav__item">
+<a href="/utils/display/" class="env-nav__link level-2" aria-current="false">
+Display
+</a>
+</li><li class="env-nav__item">
 <a href="/utils/vertical-alignment/" class="env-nav__link level-2" aria-current="false">
 Vertical alignment
+</a>
+</li><li class="env-nav__item">
+<a href="/utils/assistive-text/" class="env-nav__link level-2" aria-current="false">
+Assistive text
+</a>
+</li><li class="env-nav__item">
+<a href="/utils/shadows/" class="env-nav__link level-2" aria-current="false">
+Shadows
 </a>
 </li>
 </ul>
@@ -722,16 +785,16 @@ Toggle navigation for Layout
 </a>
 <ul class="env-collapse env-nav env-nav--sidenav" id="mobile-submenu-layout">
 <li class="env-nav__item">
-<a href="/layout/cardholder/" class="env-nav__link level-2" aria-current="false">
-Cardholder
+<a href="/layout/flexbox/" class="env-nav__link level-2" aria-current="false">
+Flexbox
 </a>
 </li><li class="env-nav__item">
 <a href="/layout/container/" class="env-nav__link level-2" aria-current="false">
 Container
 </a>
 </li><li class="env-nav__item">
-<a href="/layout/flexbox/" class="env-nav__link level-2" aria-current="false">
-Flexbox
+<a href="/layout/cardholder/" class="env-nav__link level-2" aria-current="false">
+Cardholder
 </a>
 </li>
 </ul>
@@ -779,9 +842,6 @@ Widget typography
 </nav>
 </dialog>
 </div>
-<script type="module">const b=(()=>{let e=0;const t=()=>(e+=1,"env-"+e);return e=>{if(!e.id){let n=t();for(;document.getElementById(n);)n=t();e.id=n}}})();document.addEventListener("DOMContentLoaded",()=>{const e={html:"Example HTML code",javascript:"Example JavaScript code",unknown:"Example code"};document.body.querySelectorAll(".astro-code[data-language]").forEach(t=>{let n=t.dataset.language?.toLowerCase()||"";n.includes("html")&&(n="html"),Object.hasOwnProperty.call(e,n)||(n="unknown"),t.querySelector("code")?.setAttribute("aria-label",e[n])});const t="doc-code-block--hidden",n=["doc-code-block__toggler","env-button","env-button--link","env-button--icon","env-button--icon-after","env-button--secondary","env-button--small"],o="Show full example";document.body.querySelectorAll(".doc-code-block--expandable").forEach(e=>{const a="PRE"===e.tagName?e:e.querySelector("pre");if(a&&a.clientHeight>.25*window.innerHeight){b(e),e.classList.add(t);const a=document.createElement("span");a.textContent=o;const c=document.createElement("button");c.insertAdjacentHTML("afterbegin",'<svg class="env-icon env-icon--small">\n                <use xlink:href="/sitevision/envision-icons.svg#icon-angle-down">\n                </use></svg>'),c.setAttribute("type","button"),c.setAttribute("aria-expanded","false"),c.classList.add(...n),c.setAttribute("aria-controls",e.id),c.appendChild(a),e.appendChild(c),c.addEventListener("click",()=>{const n="true"===c.getAttribute("aria-expanded");n?(e.classList.add(t),setTimeout(()=>{e.scrollIntoView({behavior:"auto",block:"center"})},1),a.textContent=o):(e.classList.remove(t),a.textContent="Hide full example"),c.setAttribute("aria-expanded",!n)})}})})</script>
-<script type="module" src="/assets/Master.astro_astro_type_script_index_1_lang.CEd-UyJx.js"></script>
-<script type="module">document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".mobile-nav-button button"),t=document.querySelector(".mobileNav"),o=document.querySelector(".mobileNav__close");let n=!1;const r=function(e){return!!(e.offsetWidth||e.offsetHeight||e.getClientRects().length)},d=function(e){const t=["a[href]","input:not([disabled])","button:not([disabled])"].join(","),o=e.querySelectorAll(t),n=[];for(let e=0;e<o.length;e++)r(o[e])&&n.push(o[e]);return n},s=e=>{if("Escape"===e.key)e.preventDefault(),l();else if("Tab"===e.key){const o=d(t),n=o[0],r=o[o.length-1];e.shiftKey?e.target===n&&(e.preventDefault(),r.focus()):e.target===r&&(e.preventDefault(),n.focus())}},l=()=>{n?(e.setAttribute("aria-expanded","false"),t.classList.remove("show"),document.body.style.removeProperty("overflow"),document.body.removeEventListener("keydown",s),e.focus()):(e.setAttribute("aria-expanded","true"),t.classList.add("show"),document.body.style.setProperty("overflow-x",""),document.body.style.setProperty("overflow-y",""),document.body.style.setProperty("overflow","hidden","important"),document.body.addEventListener("keydown",s),d(t)[1].focus()),n=!n};o&&o.addEventListener("click",l),e&&e.addEventListener("click",l)})</script>
-<script type="module">((e,d,t)=>{const c=window.matchMedia("(prefers-color-scheme: dark)"),o=c=>{c?d.classList.add(t):d.classList.remove(t),e.sessionStorage.setItem("colorscheme",c?t:"doc-light-mode")};document.addEventListener("DOMContentLoaded",()=>{document.getElementById("darkMode").addEventListener("change",e=>{o(e.target.checked)})}),c.addEventListener("change",()=>{o(c.matches),document.getElementById("darkMode").checked=c.matches})})(window,document.documentElement,"doc-dark-mode")</script>
-<script type="module">((t,e)=>{const o=e.querySelector(".doc-md-link [data-md-github-url]"),a=e.querySelector(".doc-md-link [data-md-copy-action]");let r;const i=async()=>{const t=o.dataset.mdGithubUrl,e=o.querySelector("[data-md-copy-lbl]");e.textContent="Copying...",o.disabled=!0;try{const o=await fetch(t);if(!o.ok)throw new Error(`Request failed: ${o.status}`);await(async t=>{if(!navigator.clipboard?.writeText)throw new Error("Clipboard API is not supported");await navigator.clipboard.writeText(t)})(await o.text()),e.textContent="Copied!"}catch(t){e.textContent="Copy failed",console.error(t)}};o&&o.addEventListener("click",e=>{e.preventDefault(),i().then(()=>{(e=>{const o=e.querySelector("[data-md-copy-lbl]");t.clearTimeout(r),r=t.setTimeout(()=>{e.disabled=!1,o.textContent="Copy page"},2500)})(o)})}),o&&a&&a.addEventListener("click",()=>o.click())})(window,document)</script>
-</body></html>
+<script type="module" src="/pagefind/pagefind-component-ui.js"></script><script type="module">var e=(()=>{let e=0,t=()=>(e+=1,"env-"+e);return e=>{if(!e.id){let n=t();for(;document.getElementById(n);)n=t();e.id=n}}})();document.addEventListener("DOMContentLoaded",()=>{let t={html:"Example HTML code",javascript:"Example JavaScript code",unknown:"Example code"};document.body.querySelectorAll(".astro-code[data-language]").forEach(e=>{let n=e.dataset.language?.toLowerCase()||"";n.includes("html")&&(n="html"),Object.hasOwnProperty.call(t,n)||(n="unknown"),e.querySelector("code")?.setAttribute("aria-label",t[n])});let n="doc-code-block--hidden",o=["doc-code-block__toggler","env-button","env-button--link","env-button--icon","env-button--icon-after","env-button--secondary","env-button--small"],a="Show full example";document.body.querySelectorAll(".doc-code-block--expandable").forEach(t=>{let l="PRE"===t.tagName?t:t.querySelector("pre");if(l&&l.clientHeight>.25*window.innerHeight){e(t),t.classList.add(n);let l=document.createElement("span");l.textContent=a;let d=document.createElement("button");d.insertAdjacentHTML("afterbegin",'<svg class="env-icon env-icon--small">\n                <use xlink:href="/sitevision/envision-icons.svg#icon-angle-down">\n                </use></svg>'),d.setAttribute("type","button"),d.setAttribute("aria-expanded","false"),d.classList.add(...o),d.setAttribute("aria-controls",t.id),d.appendChild(l),t.appendChild(d),d.addEventListener("click",()=>{let e="true"===d.getAttribute("aria-expanded");e?(t.classList.add(n),setTimeout(()=>{t.scrollIntoView({behavior:"auto",block:"center"})},1),l.textContent=a):(t.classList.remove(n),l.textContent="Hide full example"),d.setAttribute("aria-expanded",!e)})}})})</script><script type="module" src="/assets/Master.astro_astro_type_script_index_1_lang.DEIyW8ya.js"></script><script type="module">document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelector(".mobile-nav-button button"),t=document.querySelector(".mobile-search-button button"),o=document.querySelector(".mobileNav"),r=document.querySelector(".header-grid-item-search"),n=document.querySelector(".mobileNav__close"),l=function(e){return!!(e.offsetWidth||e.offsetHeight||e.getClientRects().length)},d=function(e){let t=["a[href]","input:not([disabled])","button:not([disabled])"].join(","),o=e.querySelectorAll(t),r=[];for(let e=0;e<o.length;e++)l(o[e])&&r.push(o[e]);return r},c=e=>{if(e){let e=window.scrollY;document.body.style.setProperty("overflow-x",""),document.body.style.setProperty("overflow-y",""),document.body.style.setProperty("overflow","hidden","important"),document.body.style.setProperty("position","fixed"),document.body.style.setProperty("width","100%"),document.body.style.setProperty("top",`-${e}px`),document.body.dataset.docScrollY=`${e}`}else{let e=Number.parseInt(document.body.dataset.docScrollY,10);["overflow","overflow-x","overflow-y","position","width","top"].forEach(e=>{document.body.style.removeProperty(e)}),delete document.body.dataset.docScrollY,Number.isFinite(e)&&window.scrollTo(window.scrollX,e)}},s=function(e,t,{initialFocusIndex:o=0,lockScroll:r=!1}={}){if(!e||!t)return;let n=!1,l=e=>{if("Escape"===e.key)e.preventDefault(),s();else if("Tab"===e.key){let o=d(t),r=o[0],n=o[o.length-1];if(!r||!n)return;e.shiftKey?e.target===r&&(e.preventDefault(),n.focus()):e.target===n&&(e.preventDefault(),r.focus())}},s=()=>{e.setAttribute("aria-expanded","false"),t.classList.remove("show"),r&&c(!1),document.body.removeEventListener("keydown",l),e.focus(),n=!1},i=()=>{n?s():(()=>{e.setAttribute("aria-expanded","true"),t.classList.add("show"),r&&c(!0),document.body.addEventListener("keydown",l);let s=d(t),i=s[o]||s[0];i&&i.focus(),n=!0})()};return e.addEventListener("click",i),{close:s,toggle:i}},i=s(e,o,{initialFocusIndex:1,lockScroll:!0});s(t,r,{initialFocusIndex:0}),n&&i&&n.addEventListener("click",i.close)})</script><script type="module">((e,d,t)=>{let c=window.matchMedia("(prefers-color-scheme: dark)"),o=c=>{c?d.classList.add(t):d.classList.remove(t),e.sessionStorage.setItem("colorscheme",c?t:"doc-light-mode")};document.addEventListener("DOMContentLoaded",()=>{document.getElementById("darkMode").addEventListener("change",e=>{o(e.target.checked)})}),c.addEventListener("change",()=>{o(c.matches),document.getElementById("darkMode").checked=c.matches})})(window,document.documentElement,"doc-dark-mode")</script><script type="module">((t,e)=>{let a,o=e.querySelector(".doc-md-link [data-md-github-url]"),r=e.querySelector(".doc-md-link [data-md-copy-action]"),i=e=>{let o=e.querySelector("[data-md-copy-lbl]");t.clearTimeout(a),a=t.setTimeout(()=>{e.disabled=!1,o.textContent="Copy page"},2500)},d=async()=>{let t=o.dataset.mdGithubUrl,e=o.querySelector("[data-md-copy-lbl]");e.textContent="Copying...",o.disabled=!0;try{let a=await fetch(t);if(!a.ok)throw Error(`Request failed: ${a.status}`);await(async t=>{if(!navigator.clipboard?.writeText)throw Error("Clipboard API is not supported");await navigator.clipboard.writeText(t)})(await a.text()),e.textContent="Copied!"}catch(t){e.textContent="Copy failed",console.error(t)}};o&&o.addEventListener("click",t=>{t.preventDefault(),d().then(()=>{i(o)})}),o&&r&&r.addEventListener("click",()=>o.click())})(window,document)</script>
+</body>
+</html>

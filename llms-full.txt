@@ -28,23 +28,23 @@ is used as background color for Modal dialogs.
 
 Font and link colors should have at least a 4.5:1 contrast ratio on `--env-background-color` and `--env-section-background-color`.
 
-Depending on design and usage, it´s recommended to try to get at least a 4.5:1 contrast ratio on `--env-section-background-color-05` as well.
+Depending on design and usage, it's recommended to try to get at least a 4.5:1 contrast ratio on `--env-section-background-color-05` as well.
 
 ## Examples
 
 `--env-background-color` is used outside the centered boxes.
 
 ```html
-<div class="example-fill example-basic-colors  env-p-around--xx-large">
+<div class="example-fill example-basic-colors  env-p--xx-large">
    <div
-      class="env-ui-section env-border env-border--05 env-p-around--large env-m-bottom--large"
+      class="env-ui-section env-border env-border--05 env-p--large env-m-block-end--large"
    >
       <div class="env-text">
          Base text on section background with a border 05 and
          <a href="javascript:void(0)" class="env-link">a link</a>.
       </div>
    </div>
-   <div class="env-ui-section-05 env-border env-p-around--large">
+   <div class="env-ui-section-05 env-border env-p--large">
       <div class="env-text">
          Base text on section background 05, standard border and
          <a href="javascript:void(0)" class="env-link">a link</a>.
@@ -100,9 +100,9 @@ Preset color combinations, use for larger blocks of content.
          <div class="example-variant">
             <h2 class="env-text-h4">Default</h2>
             <p>
-               Bacon <a href="#block" class="env-link">ipsum</a> dolor
+               Bacon <a href="#blocks" class="env-link">ipsum</a> dolor
                <a href="#blocks">amet beef</a> cupim brisket pork
-               <a href="#block" class="env-link-secondary">turducken</a>.
+               <a href="#blocks" class="env-link-secondary">turducken</a>.
             </p>
          </div>
       </div>
@@ -112,9 +112,9 @@ Preset color combinations, use for larger blocks of content.
          <div class="example-variant">
             <h2 class="env-text-h4">Primary</h2>
             <p>
-               Bacon <a href="#block" class="env-link">ipsum</a> dolor
+               Bacon <a href="#blocks" class="env-link">ipsum</a> dolor
                <a href="#blocks">amet beef</a> cupim brisket pork
-               <a href="#block" class="env-link-secondary">turducken</a>.
+               <a href="#blocks" class="env-link-secondary">turducken</a>.
             </p>
          </div>
       </div>
@@ -124,9 +124,9 @@ Preset color combinations, use for larger blocks of content.
          <div class="example-variant">
             <h2 class="env-text-h4">Secondary</h2>
             <p>
-               Bacon <span href="#block" class="env-link">ipsum</span> dolor
+               Bacon <span href="#blocks" class="env-link">ipsum</span> dolor
                <a href="#blocks">amet beef</a> cupim brisket pork
-               <a href="#block" class="env-link-secondary">turducken</a>.
+               <a href="#blocks" class="env-link-secondary">turducken</a>.
             </p>
          </div>
       </div>
@@ -147,7 +147,7 @@ An Envision theme uses one base brand color and one matching contrast color.
 - From the base brand color, Envision generates a palette of lighter and darker variants.
 - Each palette color has a matching contrast color verified against **WCAG 2 AA**.
 
-[The default theme](/colors/brand-colors/#brand-defaults) uses a neutral brand color.
+[The default theme](/colors/brand-colors/#default-brand-color-palette) uses a neutral brand color.
 
 ## Palette rules
 
@@ -176,9 +176,7 @@ Typical branded usage includes:
 - progress indicators
 - highlighted UI sections
 
-<h2 class="doc-heading-2">
-   Example branding of components <span id="examples" class="offset-anchor"></span>
-</h2>
+## Example branding of components
 
 The following examples are visual demonstrations and do not define the color system.
 
@@ -186,7 +184,7 @@ The following examples are visual demonstrations and do not define the color sys
 
 <button type="button" class="env-button env-button--brand">Brand button</button>
 
-<div class="env-m-vertical--large">
+<div class="env-m-block--large">
 <span class="env-badge env-badge--brand">Badge</span>
 </div>
 
@@ -222,7 +220,7 @@ The following examples are visual demonstrations and do not define the color sys
 </div>
 
 <div class="env-theme-example-brand">
-<div class="env-popover example-static-popover env-m-vertical--large" data-popper-placement="top">
+<div class="env-popover example-static-popover env-m-block--large" data-popper-placement="top">
    <div class="env-popover__arrow"></div>
    <div class="env-popover__content">
       <h2 class="env-ui-text-sectionheading env-popover__header__title">Section heading</h2>
@@ -238,7 +236,7 @@ The following examples are visual demonstrations and do not define the color sys
 </div>
 
 <div class="example-progress">
-   <p class="env-ui-text-sectionheading env-m-bottom--large">
+   <p class="env-ui-text-sectionheading env-m-block-end--large">
       Section heading
    </p>
    <div class="env-progress-poll" title="Number of votes: 5">
@@ -328,11 +326,11 @@ The following examples are visual demonstrations and do not define the color sys
 
 </div>
 
-## Default brand color palette <span id="brand-defaults" class="brand-defaults"></span>
+## Default brand color palette
 
 The default theme uses this neutral brand palette.
 
-<ol class="example-brand-color-list env-m-vertical--large env-theme-default-brand">
+<ol class="example-brand-color-list env-m-block--large env-theme-default-brand">
    <li class="example-section-brand"><div>Brand color</div></li>
    <li class="example-section-brand-05"><div>Brand 05</div></li>
    <li class="example-section-brand-10"><div>Brand 10</div></li>
@@ -583,6 +581,7 @@ Element colors are used for elements and components. See usage examples below.
                   class="env-tabs__link env-tabs__link--active"
                   href="#panel1"
                   role="tab"
+                  aria-controls="panel1"
                   aria-selected="true"
                   tabindex="0"
                 >Tab 1</a
@@ -601,6 +600,8 @@ Element colors are used for elements and components. See usage examples below.
                 >
               </li>
             </ul>
+            <div id="panel1" role="tabpanel" aria-labelledby="tab1" hidden></div>
+            <div id="panel2" role="tabpanel" aria-labelledby="tab2" hidden></div>
           </div>
         </div>
         <div class="example-element example-element--left">
@@ -811,11 +812,11 @@ Status color text should be used when status color is applied to text on section
 
 Documentation of examples:
 
-- [Status variant Badge](/components/badge/#status-variant)
+- [Status variant Badge](/components/badge/#status-variants)
 - [Custom inline SVG decoration](/components/icons/#attention)
 - [Status badge](/components/badge/#status-badge)
-- [Status badge on Profile image](/components/profile-image/#status-badge)
-- [Form error message](/forms/form-elements/#validation)
+- [Status badge on Profile image](/components/profile-image/#status-badge-in-responsive-size-profile-image)
+- [Form error message](/forms/form-elements/#validation-error)
 - [Text status colors](/typography/basic-text/#status-colors)
 
 ---
@@ -980,7 +981,7 @@ Description: Use the Badge component to display small labels for status, notific
 <span class="env-badge env-badge--info">Info</span>
 ```
 
-### Status variants <span id="status-variant" class="offset-anchor"></span>
+### Status variants
 
 ```html
 <span class="env-badge env-badge--neutral">Neutral</span>
@@ -996,7 +997,7 @@ Valid values for `{n}` are: `05`, `10`, `15`, `20`, `25`, `30`, `35`, `40`, `45`
 , `85`, `90`, `95`, `100`.
 
 <div class="example-badges">
-   <div class="env-m-bottom--small">
+   <div class="env-m-block-end--small">
       <span class="env-badge env-badge--brand">Brand</span>
       <span class="env-badge env-badge--brand-05">Brand 05</span>
       <span class="env-badge env-badge--brand-10">Brand 10</span>
@@ -1021,9 +1022,9 @@ Valid values for `{n}` are: `05`, `10`, `15`, `20`, `25`, `30`, `35`, `40`, `45`
    </div>
 </div>
 
-### Status badge <span id="status-badge" class="offset-anchor"></span>
+### Status badge
 
-Indicates active/inactive status. May be used on text elements and also in combination with [profile image](/components/profile-image/#status-badge).
+Indicates active/inactive status. May be used on text elements and also in combination with [profile image](/components/profile-image/#status-badge-in-responsive-size-profile-image).
 
 ```html
 <p class="env-status-badge">Last logged in 5 h</p>
@@ -1143,7 +1144,7 @@ its width and height to make a nice aligned grid of cards.
       </div>
       <div class="env-card__footer env-text--small">
          <a href="#" type="button" class="env-button env-button--link">
-            <svg class="env-icon env-icon--small env-m-right--xx-small">
+            <svg class="env-icon env-icon--small env-m-inline-end--xx-small">
                <use href="/sitevision/envision-icons.svg#icon-phone"></use>
             </svg>
             Administrator
@@ -1175,25 +1176,26 @@ vertically, the body of the Card will be the element that stretches.
 
 ## Components – Collapse
 URL: https://envisionui.io/components/collapse/
-Description: The Collapse component toggles content visibility, allowing sections to expand or collapse as needed.
+Description: The Collapse component is used to show and hide content through a trigger element.
 
-## Collapsible content
+Use Collapse when you want to show or hide a section of content. The component consists of a toggle button and a collapsible content element. The content is hidden by default and becomes visible when the toggle button is activated.
+
+## Basic example
 
 ```html
 <h4 class="env-ui-text-sectionheading">
    <a
       role="button"
       class="env-link"
-      href="#container1"
+      href="#collapse-1"
       data-env-collapse
       aria-expanded="false"
-      aria-controls="container1"
+      aria-controls="collapse-1"
    >
       Example 1
    </a>
 </h4>
-
-<div class="env-collapse" id="container1">
+<div class="env-collapse" id="collapse-1">
    <p class="env-text-body-02">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget
       lobortis dui, in accumsan augue. Quisque nec augue quam. Donec sed purus
@@ -1202,40 +1204,102 @@ Description: The Collapse component toggles content visibility, allowing section
 </div>
 ```
 
-Add `env-collapse--show` to have your content expanded
+## Required markup
 
-## Background
+The collapsible content element must have:
 
-Add `env-collapse-header` to give the collapsible header a background
-Add `env-collapse-header--icons` to add icons
+- `class="env-collapse"`
+- a unique `id`
+
+The toggle button element must have:
+
+- Attribute `data-env-collapse`
+- Either `href="#id"` or `data-target="#id"`_\*_
+- `aria-controls="id"`_\*_
+- `aria-expanded="true|false"`
+
+<p class="doc-legend">
+   <span style="font-size:1.4em">*</span> = The ID of the collapsible content element.
+</p>
+
+When using an `<a>` element as the toggle button, also add `role="button"`.
+
+A `<button type="button">` must use `data-target`.
+
+## Styled toggle button
+
+Use `env-collapse-header` to style the toggle button as an expandable
+section header. Add `env-collapse-header--icons` to display expand and collapse
+icons.
 
 ```html
 <h4 class="env-ui-text-sectionheading">
    <a
       class="env-collapse-header env-flex env-flex--justify-content-between"
       role="button"
-      href="#container2"
+      href="#collapse-2"
       data-env-collapse
       aria-expanded="false"
-      aria-controls="container2"
+      aria-controls="collapse-2"
    >
-      <span class="env-m-right--x-large"> Example 2 </span>
+      <span class="env-m-inline-end--x-large">Example 2</span>
       <span class="env-collapse-header--icons"></span>
    </a>
 </h4>
-
-<div class="env-collapse" id="container2">
+<div class="env-collapse" id="collapse-2">
    <p class="env-text-body-02">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget
-      lobortis dui, in accumsan augue. Quisque nec augue quam. Donec sed purus
-      quam. Proin eu tincidunt metus.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
    </p>
 </div>
 ```
 
+## Initially expanded
+
+Add `env-collapse--show` to the content element if the content
+should be visible when the page loads.
+
+Add `env-collapse--expanded` to the toggle button. Make sure the toggle button uses
+`aria-expanded="true"`.
+
+```html
+<h4 class="env-ui-text-sectionheading">
+   <a
+      class="env-collapse-header env-collapse--expanded env-flex env-flex--justify-content-between"
+      role="button"
+      href="#collapse-3"
+      data-env-collapse
+      aria-expanded="true"
+      aria-controls="collapse-3"
+   >
+      <span class="env-m-inline-end--x-large">Example 3</span>
+      <span class="env-collapse-header--icons"></span>
+   </a>
+</h4>
+<div class="env-collapse env-collapse--show" id="collapse-3">
+   <p class="env-text-body-02">This content is visible when the page loads.</p>
+</div>
+```
+
+## Initialization
+
+Toggle buttons using data-env-collapse are initialized automatically. No manual
+JavaScript initialization is required for standard click interactions. The component is
+initialized the first time it is used.
+
+## Linking to content inside a collapse <span class="doc-badge doc-badge--info">2026.07.1</span>
+
+If the page loads with a hash pointing to content inside a collapsed section,
+the section is automatically expanded so the target content becomes accessible.
+
+The same behavior applies when clicking a same-page anchor link that points to
+content inside a collapsed section.
+
 ## Methods
 
-Show
+The selector argument should target the `.env-collapse` content element, not the
+toggle button.
+
+### Show
 
 ```javascript
 envision.collapse('#myCollapse').then(function (collapses) {
@@ -1243,7 +1307,7 @@ envision.collapse('#myCollapse').then(function (collapses) {
 });
 ```
 
-Hide
+### Hide
 
 ```javascript
 envision.collapse('#myCollapse').then(function (collapses) {
@@ -1251,7 +1315,7 @@ envision.collapse('#myCollapse').then(function (collapses) {
 });
 ```
 
-Toggle
+### Toggle
 
 ```javascript
 envision.collapse('#myCollapse').then(function (collapses) {
@@ -2254,7 +2318,7 @@ An icon can be marked as inactive by adding modifier: `env-icon--inactive` which
 </div>
 ```
 
-## Attention <span id="attention" class="offset-anchor"></span>
+## Attention
 
 For Envision icons and custom inline SVG images you may use modifier `env-icon--attention`
 on the icon or on part of an icon. The modifier will set the color to Status color Attention.
@@ -2291,7 +2355,7 @@ URL: https://envisionui.io/components/image-viewer-2/
 Description: Accessible image slideshows and lightbox galleries with flexible layout and predictable motion.
 
 <section id="demo-image-viewer"
-class="env-m-vertical--large"
+class="env-m-block--large"
          aria-label="Photos from Örebro">
    <figure data-href="/placeholders/originals/10.webp" data-zoom>
       <img src="/placeholders/900x400/10.webp" alt="">
@@ -2441,7 +2505,7 @@ The container element should have an `aria-label` attribute.
 ```html
 <section
    id="example-image-viewer"
-   class="env-p-around--medium"
+   class="env-p--medium"
    aria-label="Photos from Örebro"
 >
    <figure data-href="/placeholders/originals/10.webp" data-zoom>
@@ -2628,17 +2692,17 @@ a caption that is only shown in the lightbox.
 | `buttons.ghost`_\*\*_   | boolean | Use [ghost button](/forms/button/) type                        | `false`       |
 
 <div>
-<p class="example-dashboard-color-list-legend env-m-top--0">
+<p class="doc-legend env-m-block-end--0">
    <span style="font-size:1.4em">*</span> = Option added in 2026.02.1.
 </p>
 </div>
 <div>
-<p class="example-dashboard-color-list-legend env-m-top--0">
+<p class="doc-legend env-m-block-end--0">
    <span style="font-size:1.4em">**</span> = Options type and ghost not applicable for overlay placement.
 </p>
 </div>
 <div>
-<p class="example-dashboard-color-list-legend env-m-top--0">
+<p class="doc-legend">
    Options speed and overlay were deprecated in 2026.02.1, please use transition and buttons.placement instead.
 </p>
 </div>
@@ -3966,7 +4030,7 @@ if (popoverContentEl) {
 Add `type: 'menu'` in JS or `data-type="menu"` in HTML
 for a menu-styled popover. Use class `env-popover__item` for the menu items.
 
-<div class="env-m-vertical--large">
+<div class="env-m-block--large">
 <div class="example-static-popover env-popover" data-popper-placement="bottom">
    <div class="env-popover__arrow"></div>
    <div class="env-popover__header">
@@ -4038,14 +4102,12 @@ if (popoverMenuContentEl) {
 }
 ```
 
-<span id="tooltip" class="offset-anchor"></span>
-
 ## Popover Tooltip
 
 Add `type: 'tooltip'` in JS or `data-type="tooltip"` in HTML
 for a Tooltip-styled popover. Common text components will adjust color automatically.
 
-<div class="env-m-vertical--large">
+<div class="env-m-block--large">
 <div class="example-static-popover env-popover env-popover--tooltip" data-popper-placement="bottom">
 <div class="env-popover__arrow"></div>
    <div class="env-popover__header">
@@ -4092,7 +4154,7 @@ if (popoverTooltipContentEl) {
 }
 ```
 
-## Options <span id="options" class="offset-anchor"></span>
+## Options
 
 - `placement` _string_
    - Prefered initial placement.
@@ -4226,8 +4288,6 @@ the image is smaller than the image.
    </div>
 </div>
 ```
-
-<span id="status-badge" class="offset-anchor"></span>
 
 #### Status badge in responsive size Profile image
 
@@ -4456,7 +4516,7 @@ Add `--striped--animated` to animate the stripes
 
 ```html
 <div class="example-progress">
-   <p class="env-text env-m-bottom--large">
+   <p class="env-text env-m-block-end--large">
       Lorem ipsum lectus molestie vivamus?
    </p>
    <div class="env-progress-poll" title="Number of votes: 5">
@@ -4517,7 +4577,7 @@ Add `--striped--animated` to animate the stripes
 
 ## Components – Spinner
 URL: https://envisionui.io/components/spinner/
-Description: The Spinner component displays loading animations with standard or bounce styles and optional delays.
+Description: The Spinner component displays loading animations with different styles and optional delays.
 
 ## Standard
 
@@ -4541,15 +4601,98 @@ Description: The Spinner component displays loading animations with standard or 
 </div>
 ```
 
+## Ellipsis <span class="doc-badge doc-badge--info">2026.10.1</span>
+
+A simple text-based spinner that uses three dots to indicate loading.
+
+```html
+<p>
+   Laddar<span class="env-spinner-ellipsis" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+   </span>
+</p>
+```
+
+## Spinners in buttons <span class="doc-badge doc-badge--info">2026.10.1</span>
+
+Button and CTAs may include a spinner to indicate loading state. The spinner will inherit the button's text color and size.
+
+For `env-button`, use a fitting combination of `env-flex--gap-` and `env-m-` utility classes
+for the gap between the spinner and the button text. The CTA button will not require any additional spacing classes.
+
+```html
+<p>
+   <button class="env-button env-button--primary">
+      Ellipsis<span class="env-spinner-ellipsis" aria-hidden="true">
+         <span></span>
+         <span></span>
+         <span></span>
+      </span>
+   </button>
+   <button class="env-button env-flex--gap-x-small">
+      <span class="env-spinner">
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+      </span>
+      Spinner
+   </button>
+   <button
+      type="button"
+      class="env-button env-button--primary env-button--ghost env-button--icon env-button--icon-before env-flex--gap-x-small"
+   >
+      <span class="env-m-inline-start--x-small env-m-inline-start--negative"
+         >Icon & spinner</span
+      >
+      <span class="env-spinner-bounce">
+         <span></span>
+         <span></span>
+         <span></span>
+      </span>
+      <svg class="env-icon">
+         <use href="/sitevision/envision-icons.svg#icon-phone"></use>
+      </svg>
+   </button>
+</p>
+
+<p>
+   <button class="env-cta">
+      Spinner
+      <span class="env-spinner-bounce">
+         <span></span>
+         <span></span>
+         <span></span>
+      </span>
+   </button>
+   <a href="javascript:void(0)" class="env-cta">
+      <svg class="env-icon env-icon--small">
+         <use href="/sitevision/envision-icons.svg#icon-phone"></use>
+      </svg>
+      Icon & spinner
+      <span class="env-spinner">
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+      </span>
+   </a>
+</p>
+```
+
 ## Hide spinner
 
-Use modifier `env-spinner--hide` or `env-spinner-bounce--hide` to hide the spinner. i.e `env-spinner env-spinner--hide`
+Use modifier `env-spinner--hide`, `env-spinner-bounce--hide` or `env-spinner-ellipsis--hide` to hide the spinner.
 
 ## Delayed spinner
 
 Delay showing the spinner to avoid spinner flashing when the content loads fast.
 
-Use modifier `env-spinner--fade-in` or `env-spinner-bounce--fade-in` for a delayed spinner.
+Use modifier `env-spinner--fade-in`, `env-spinner-bounce--fade-in` or `env-spinner-ellipsis--fade-in` for a delayed spinner.
 Data attribute `data-delay="short"` may be used to control delay timing. Allowed values are:
 
 - `short` (0.25s delay)
@@ -4570,7 +4713,7 @@ Data attribute `data-delay="short"` may be used to control delay timing. Allowed
 </div>
 ```
 
-<div class="env-m-top--x-small">
+<div class="env-m-block-start--x-small">
    <button class="env-button" id="toggle-spinner-1">Short delay</button>
    <button class="env-button" id="toggle-spinner-2">Medium delay</button>
    <button class="env-button" id="toggle-spinner-3">Long delay</button>
@@ -5085,7 +5228,7 @@ A child element with `role="tooltip"` is required.
 envision.tooltip();
 ```
 
-**Note:** HTML is not allowed inside the tooltip. For advanced content, please use [Popover Tooltip](/components/popover/#tooltip).
+**Note:** HTML is not allowed inside the tooltip. For advanced content, please use [Popover Tooltip](/components/popover/#popover-tooltip).
 
 ## Configuration
 
@@ -5137,7 +5280,7 @@ if (tooltipEl) {
 }
 ```
 
-## Options <span id="options" class="offset-anchor"></span>
+## Options
 
 `envision.tooltip` takes two parameters:
 
@@ -5176,7 +5319,7 @@ Other colors and hard coded color values should be avoided.
 Most dashboard widgets should be placed inside a wrapper element with class `env-dashboard-widget`.
 This will set the correct background, borders and more for the widget. The wrapper does not set a padding.
 
-<section class="env-dashboard-widget env-p-horizontal--large env-p-vertical--small env-m-bottom--large" style="width: fit-content">
+<section class="env-dashboard-widget env-p-inline--large env-p-block--small env-m-block-end--large" style="width: fit-content">
    <h2 class="env-ui-text-sectionheading">
    Simple widget   
    </h2>
@@ -5214,13 +5357,13 @@ For adapting a widget to different sizes, see [Responsive widgets](/dashboard/re
 
 ## Widget example
 
-<section class="env-dashboard-widget env-p-horizontal--large env-p-vertical--small" style="width: fit-content" role="presentation">
+<section class="env-dashboard-widget env-p-inline--large env-p-block--small" style="width: fit-content" role="presentation">
    <h2 class="env-ui-text-sectionheading">
       Chart widget example heading
    </h2>
-   <div class="env-m-vertical--medium">
+   <div class="env-m-block--medium">
 <p class="env-ui-text-value">
-<span class="env-m-right--large"><b class="env-dashboard-color-txt-orange-50">—</b>&nbsp;Legend line 1</span>
+<span class="env-m-inline-end--large"><b class="env-dashboard-color-txt-orange-50">—</b>&nbsp;Legend line 1</span>
 <span><b class="env-dashboard-color-txt-cyan-50">—</b>&nbsp;Legend line 2</span>
 </p>
 </div>
@@ -5294,8 +5437,8 @@ The grid column container where the app will be displayed is a [containment cont
 ### Responsive widget example
 
 <div class="example-responsive-widget-wrapper">
-   <section class="env-dashboard-widget example-responsive-widget env-m-bottom--large">
-      <div class="example-responsive-widget__resizeable env-p-horizontal--large env-p-vertical--small">
+   <section class="env-dashboard-widget example-responsive-widget env-m-block-end--large">
+      <div class="example-responsive-widget__resizeable env-p-inline--large env-p-block--small">
          <h2 class="env-ui-text-sectionheading">
             Responsive example widget   
          </h2>
@@ -5365,12 +5508,12 @@ please use a [color contrast checker](https://webaim.org/resources/contrastcheck
    </ul>
 </div>
 
-<p class="example-dashboard-color-list-legend env-m-bottom--0">
+<p class="doc-legend env-m-block-end--0">
    <svg class="env-icon example-dashboard-color-list-icon">
       <use href="/images/docs-images.svg#text"></use>
    </svg> = The color will pass WCAG 2 level AA contrast requirements as text on white (widget wrapper) background.
 </p>
-<p class="example-dashboard-color-list-legend env-m-top--0">
+<p class="doc-legend">
    <span style="font-size:1.4em">*</span> = The color also passes contrast requirements if used as text on gray-05 (theme body) background.
 </p>
 
@@ -5392,12 +5535,12 @@ patterns as CSS variable names.
 
 ```html
 <div
-   class="env-dashboard-color-bg-purple-20 env-p-around--medium env-m-bottom--medium"
+   class="env-dashboard-color-bg-purple-20 env-p--medium env-m-block-end--medium"
 >
    This is a purple-20 area with default font color.
 </div>
 <div
-   class="env-dashboard-color-bg-purple-50 env-dashboard-color-txt-white env-p-around--medium"
+   class="env-dashboard-color-bg-purple-50 env-dashboard-color-txt-white env-p--medium"
 >
    This is a purple-50 area with white font color.
 </div>
@@ -5624,7 +5767,7 @@ Widgets should use [UI Text](/typography/ui-text/) for headings.
 <p class="env-ui-text-caption">Caption / description</p>
 ```
 
-### Dynamic font size in widgets <span id="dynamic-font-size" class="offset-anchor"></span>
+### Dynamic font size in widgets
 
 Widgets already has a containment context which makes them dynamic font containers by default.
 Therefore the dynamic font container is **not** required.
@@ -5640,7 +5783,7 @@ The dashboard grid adapts between 1–4 columns depending on available screen sp
 | Extra Large |  250–523 |   524-812 |  813-1071 | 1072–1440 |
 
 There are additional widget specific boundaries available for Dynamic fonts. Regular boundaries are documented
-on the [Dynamic font size page](/typography/basic-text/#dynamic-font-width-boundaries).
+on the [Dynamic font size page](/typography/dynamic-font-size/#scaling-width-boundaries).
 Boundaries are set using modifier classes `env-dynamic-font--from-{value}` and `env-dynamic-font--to-{value}`.
 
 Additional boundaries for **from** values: `524`, `813`, `1072`
@@ -6054,20 +6197,23 @@ The form field wrapper may also contain a help text using `.env-form-field-help`
 
 ### Form control container
 
-The class `.env-form-control` creates a multi purpose container used to enhance single form controls.
+The class `.env-form-control` creates a multipurpose container used to group and enhance form
+controls and related elements.
 
-It can only contain elements of the following types:
+Common elements used inside `.env-form-control` include:
 
 - `.env-form-label`
 - `.env-form-input`
 - `.env-button`
 - `.env-icon`
-- `[aria-hidden="true"]`
+- `.env-radio`
+- `.env-checkbox`
+- `.env-switch`
 
 #### Usages
 
-Create an [input group](#input-group) with label, input and button with a combinations of
-elements using `.env-form-input`, `.env-button` and `.env-form-label`.
+Create an [input group](#input-group) with a label, input and button using a combination of
+`.env-form-input`, `.env-button`, and `.env-form-label`.
 
 ```html
 <div class="env-form-field">
@@ -6089,10 +6235,10 @@ elements using `.env-form-input`, `.env-button` and `.env-form-label`.
 </div>
 ```
 
-[Option elements](#option-elements), such as radio buttons, checkboxes and switches in combination with a label
-should use the wrapper for alignment and spacing.
+[Option elements](#option-elements), such as radio buttons, checkboxes and switches should use
+the wrapper together with a label for alignment and spacing.
 
-Use the combination of `.env-radio`, `.env-checkbox` or `.env-switch` and `.env-form-label`.
+Use `.env-radio`, `.env-checkbox`, or `.env-switch` together with `.env-form-label`.
 
 ```html
 <div class="env-form-control">
@@ -6168,8 +6314,6 @@ The textarea will be resizable vertically.
 </div>
 ```
 
-<span id="contenteditable" className="offset-anchor"></span>
-
 ### Contenteditable element
 
 Make sure to add `role="textbox"` and `aria-multiline="true"` to the contenteditable element.
@@ -6201,8 +6345,6 @@ With the introduction of [Customizable select elements](https://developer.mozill
 both the Select element and the Select component support a progressively enhanced approach that applies
 as much of the Envision styling as possible while maintaining native select element functionality.
 This feature is opt-in and can be enabled by adding a `button` with a `selectedcontent` tag inside the select element.
-
-<span id="select-component" className="offset-anchor"></span>
 
 ### Select component
 
@@ -6395,8 +6537,6 @@ Native select element with class `.env-form-input`. Only light styling, might lo
 </div>
 ```
 
-<span id="option-elements" class="offset-anchor"></span>
-
 ## Option elements
 
 ### Radiobutton input element
@@ -6488,6 +6628,55 @@ Use `.env-form-control` to wrap an `.env-switch` checkbox and `.env-form-label`.
 </div>
 ```
 
+## Range input element <span class="doc-badge doc-badge--info">2026.05.1</span>
+
+Use an input element with class `.env-range` and `[type="range"]`.
+
+For the deprecated two-handle component, see [Range slider](/deprecated/range-slider/).
+
+```html
+<div class="env-form-field">
+   <label for="range-1" class="env-form-label">Range input</label>
+   <input class="env-range" type="range" id="range-1" />
+</div>
+```
+
+To display step markers below the input, add a `datalist` element and connect it to the input
+with the `list` attribute. The `datalist` must contain `option` elements with a `value` attribute.
+
+```html
+<div class="env-form-field">
+   <label for="range-2" class="env-form-label">Range with markers</label>
+   <input
+      class="env-range"
+      type="range"
+      id="range-2"
+      value="100"
+      min="50"
+      max="250"
+      step="50"
+      list="range-2-markers"
+   />
+</div>
+<datalist id="range-2-markers">
+   <option value="50"></option>
+   <option value="100"></option>
+   <option value="150"></option>
+   <option value="200"></option>
+   <option value="250"></option>
+</datalist>
+```
+
+All elements with class `.env-range` and `[type="range"]` are automatically initialized on
+`DOMContentLoaded`.
+
+Range elements added to the DOM after the document has loaded must be initialized from script.
+
+```javascript
+// Initialize range elements added after DOMContentLoaded
+envision.range();
+```
+
 <div id="input-icons"></div>
 
 ## Icons in input fields
@@ -6528,8 +6717,6 @@ Use `.env-form-control` to wrap `.env-icon` and `.env-form-input`.
    </div>
 </div>
 ```
-
-<span id="input-group" class="offset-anchor"></span>
 
 ## Input group
 
@@ -6680,8 +6867,6 @@ Attribute `[readonly]` is also available for input elements.
 </form>
 ```
 
-<span id="validation" class="offset-anchor"></span>
-
 ## Validation error
 
 Add modifier `.env-form-field--error` to define error validation state.
@@ -6829,153 +7014,6 @@ to create a inline form layout for option inputs with consistent spacing vetical
 
 ---
 
-## Forms – Range slider
-URL: https://envisionui.io/forms/range-slider/
-Description: The Range Slider component lets users select a value or range with customizable intervals and limits.
-
-Capture a range
-
-```html
-<div
-   id="my-slider"
-   class="env-range-slider example-range-slider env-m-bottom--xxx-large"
->
-   <div class="env-range-slider__range"></div>
-   <div class="env-range-slider__handle" tabindex="0"></div>
-   <div class="env-range-slider__handle" tabindex="0"></div>
-
-   <div class="env-range-slider__values">
-      <span
-         class="env-range-slider__values__value env-range-slider__values__value--from env-text"
-      ></span>
-      <span class="env-range-slider__values__separator env-text">-</span>
-      <span class="env-range-slider__values__value env-text"></span>
-   </div>
-</div>
-```
-
-```javascript
-envision.rangeSlider('#my-slider', object);
-```
-
-## Options
-
-### values
-
-- **Type:** Array
-- **Default:** [0, 0]
-
-Values to initialize the slider with.
-
-```javascript
-envision.rangeSlider('#my-slider', {
-   values: [20, 70],
-});
-```
-
-### min
-
-- **Type:** Number
-- **Default:** 0
-
-The minimum value of the slider.
-
-```javascript
-envision.rangeSlider('#my-slider', {
-   min: 100,
-});
-```
-
-### max
-
-- **Type:** Number
-- **Default:** 100
-
-The maximum value of the slider.
-
-```javascript
-envision.rangeSlider('#my-slider', {
-   max: 200,
-});
-```
-
-### step
-
-- **Type:** Number
-- **Default:** 1
-
-The size of every step between min and max. The value range (max - min) should be evenly divisible by the step.
-
-```javascript
-envision.rangeSlider('#my-slider', {
-   step: 5,
-});
-```
-
-### visibleValues
-
-- **Type:** Boolean
-- **Default:** true
-
-If values should be visible below the handles.
-
-```javascript
-envision.rangeSlider('#my-slider', {
-   visibleValues: false,
-});
-```
-
-<span id="events" class="offset-anchor"></span>
-
-## Events
-
-### input
-
-Triggered for every move during slide.
-
-```javascript
-document.querySelector('#my-slider').addEventListener('input', (e) => {
-   console.log('input', e.detail);
-});
-```
-
-### change
-
-Triggered when slide is completed.
-
-```javascript
-document.querySelector('#my-slider').addEventListener('change', (e) => {
-   // Triggered when slide is completed
-   console.log('change', e.detail);
-});
-```
-
-### slide <span class="doc-badge doc-badge--danger">Deprecated</span>
-
-Triggered for every move during slide. Event `slide` is deprecated, please use `input` event.
-
-### slidestop <span class="doc-badge doc-badge--danger">Deprecated</span>
-
-Triggered when slide is completed. Event `slidestop` is deprecated, please use `change` event.
-
-## Methods
-
-### values(values)
-
-Parameters
-
-- **values:** An array of values to set
-
-Set the values for the range.
-
-```javascript
-envision.rangeSlider('#my-slider').then(function (sliders) {
-   sliders[0].values([50, 90]);
-});
-```
-
----
-
 ## Forms – Tag Select
 URL: https://envisionui.io/forms/tag-select/
 Description: Tag Select enables customizable multi-select interfaces with cross-browser support and styling.
@@ -7019,8 +7057,6 @@ tagSelect.then(function (selects) {
    selects[0].addOptions({ value: 'newOption', text: 'New option' });
 });
 ```
-
-<span id="single-select" class="offset-anchor"></span>
 
 ## Single select
 
@@ -7188,7 +7224,7 @@ envision
       render: {
          item: (data, escape) =>
             `<div>
-               <svg class="env-icon env-m-right--x-small"><use href="/sitevision/envision-icons.svg#icon-check-line"></use></svg>
+               <svg class="env-icon env-m-inline-end--x-small"><use href="/sitevision/envision-icons.svg#icon-check-line"></use></svg>
                ${escape(data.text)}
             </div>`,
       },
@@ -7348,10 +7384,10 @@ _Note: The `readonly` attribute is not supported or relevant to the Tag Select c
 - `onChange` _function(value) { ... }_
    - Invoked when the value of the control changes.
 
-- `onItemAdd` _function(value, $item) { ... }_
+- `onItemAdd` _function(value, item) { ... }_
    - Invoked when an item is selected.
 
-- `onItemRemove` _function(value) { ... }_
+- `onItemRemove` _function(value, item) { ... }_
    - Invoked when an item is deselected.
 
 - `onClear` _function() { ... }_
@@ -7381,8 +7417,8 @@ _Note: The `readonly` attribute is not supported or relevant to the Tag Select c
 - `onBlur` _function() { ... }_
    - Invoked when the control loses focus.
 
-- `onLoad` _function() { ... }_
-   - Invoked when new options have been loaded and added to the control via the load option.
+- `onLoad` _function(options, optgroup) { ... }_
+   - Invoked when new options have been loaded and added to the control via the load option or `load` API method.
 
 ## API functions
 
@@ -7397,8 +7433,8 @@ envision.select('#tag-select').then(function (selects) {
 
 ### Options
 
-- `addOptions(data)`
-   - Adds an available option, or array of options. If it already exists, nothing will happen. Note: this does not refresh the options list dropdown (use refreshOptions() for that).
+- `addOptions(data|data[])`
+   - Adds one option object or an array of option objects. If an option already exists, nothing will happen. Note: this does not refresh the options list dropdown (use `refreshOptions()` for that).
 
 - `getOption(value)`
    - Retrieves the DOM element for the option identified by the given value.
@@ -7413,16 +7449,7 @@ envision.select('#tag-select').then(function (selects) {
    - Refreshes the list of available options shown in the autocomplete dropdown menu.
 
 - `load(query)`
-   - Invoked when new options should be loaded from the server. Called with the current query string.
-
-- `open()`
-   - Shows the autocomplete dropdown containing the available options.
-
-- `close()`
-   - Closes the autocomplete dropdown menu.
-
-- `clear(silent)`
-   - Resets / clears all selected items from the control. If `silent` is truthy, no change event will be fired on the original input.
+   - Initiates loading options from the remote data provider for the given query string.
 
 - `clearOptions(clearFilter?)`
    - Removes all unselected options from the control. To clear selection options, call clear() before calling clearOptions().
@@ -7436,7 +7463,18 @@ envision.select('#tag-select').then(function (selects) {
    - Returns the DOM element of the item matching the given value.
 
 - `addItem(value, silent)`
-   - "Selects" an item. Adds it to the list at the current caret position. If silent is truthy, no change event will be fired on the original input.
+   - "Selects" an item. Adds it to the list at the current caret position. If `silent` is truthy, no change event will be fired on the original input.
+
+- `clear(silent)`
+   - Resets / clears all selected items from the control. If `silent` is truthy, no change event will be fired on the original input.
+
+### Dropdown
+
+- `open()`
+   - Shows the autocomplete dropdown containing the available options.
+
+- `close()`
+   - Closes the autocomplete dropdown menu.
 
 ### Other
 
@@ -8097,7 +8135,7 @@ Valid values
 </div>
 ```
 
-### Flex wrap <span id="flex-wrap" class="offset-anchor"></span>
+### Flex wrap
 
 Modifiers applicable to flex containers (`env-flex`).
 
@@ -8129,9 +8167,7 @@ Valid modifiers:
 </div>
 ```
 
-<span id="flex-gap" class="offset-anchor"></span>
-
-### Flex gap <span class="doc-badge doc-badge--info">2025.07.1</span>
+### Flex gap <span id="flex-gap"></span><span class="doc-badge doc-badge--info">2025.07.1</span>
 
 Modifiers applicable to flex containers (`env-flex`).
 
@@ -8331,8 +8367,6 @@ Description: The Basic Text utility offers classes for headings, alignment, tran
 </div>
 ```
 
-<span id="status-colors" class="offset-anchor"></span>
-
 ## Status colors
 
 ```html
@@ -8484,16 +8518,16 @@ described below.
 The default values are a scaling factor of `1 – 1.25` between widths `400px – 750px`.
 
 <div class="example-dynamic-font-wrapper">
-   <div class="example-dynamic-font env-m-bottom--large">
+   <div class="example-dynamic-font env-m-block-end--large">
       <div class="example-dynamic-font__resizeable">
          <div class="env-container example-dynamic-container">
-            <div class="env-p-around--medium">
+            <div class="env-p--medium">
                <div class="env-dynamic-font">
                   <h2 class="env-ui-text-sectionheading">
                      Dynamic font
                      <span class="example-dynamic-font__elfontsize"></span>
                   </h2>
-                  <p class="env-text env-m-top--small">
+                  <p class="env-text env-m-block-start--small">
                      This text will resize dynamically depending on the width of the containment context.
                      Baseline font-size will go from 1em to 1.25em starting at 400px width up to 750px.
                      The heading will also scale to a factor of 1.25, but starting at 1.25em it will scale up to 1.5625em.
@@ -8527,7 +8561,7 @@ Text inside these elements will be dynamically scaled, text outside will not.
 </div>
 ```
 
-Note: When using [Envision for Dashboard Widgets](/dashboard/widget-typography/#dynamic-font-size),
+Note: When using [Envision for Dashboard Widgets](/dashboard/widget-typography/#dynamic-font-size-in-widgets),
 the container element is not required since the widget already is a containment context.
 
 ### Additional markup
@@ -8538,7 +8572,7 @@ separate element inside the container element. Elements placed inside the contai
 
 ```html noexample
 <div class="env-container">
-   <div class="env-p-around--medium">
+   <div class="env-p--medium">
       <h2 class="env-ui-text-sectionheading">This heading will not resize</h2>
       <div class="env-dynamic-font">
          <p class="env-text">This text will resize ...</p>
@@ -8560,14 +8594,14 @@ Default scaling factor is `1.25` which is identical to using the `1_25` modifer.
 _Note that dot is replaced by underscore as dot is not allowed in CSS class names._
 
 <div class="example-dynamic-font-wrapper">
-   <div class="example-dynamic-font env-m-bottom--large">
+   <div class="example-dynamic-font env-m-block-end--large">
       <div class="example-dynamic-font__resizeable">
          <div class="env-container example-dynamic-container">
-            <div class="env-p-around--medium">
+            <div class="env-p--medium">
                <h2 class="env-ui-text-sectionheading">
                   Scaling factor
                </h2>
-               <div class="env-dynamic-font env-dynamic-font--scale-1_125 env-m-top--small">
+               <div class="env-dynamic-font env-dynamic-font--scale-1_125 env-m-block-start--small">
                   <p class="env-text">
                      Scaling factor 1.125
                      <span class="example-dynamic-font__elfontsize"></span>
@@ -8585,44 +8619,45 @@ _Note that dot is replaced by underscore as dot is not allowed in CSS class name
                      <span class="example-dynamic-font__elfontsize"></span>
                   </p>
                </div>
-<div class="env-dynamic-font env-dynamic-font--scale-1_5">
+               <div class="env-dynamic-font env-dynamic-font--scale-1_5">
                   <p class="env-text">
                      Scaling factor 1.5
                      <span class="example-dynamic-font__elfontsize"></span>
                   </p>
                </div>
-<div class="env-dynamic-font env-dynamic-font--scale-1_625">
+               <div class="env-dynamic-font env-dynamic-font--scale-1_625">
                   <p class="env-text">
                      Scaling factor 1.625
                      <span class="example-dynamic-font__elfontsize"></span>
                   </p>
                </div>
-<div class="env-dynamic-font env-dynamic-font--scale-1_75">
+               <div class="env-dynamic-font env-dynamic-font--scale-1_75">
                   <p class="env-text">
                      Scaling factor 1.75
                      <span class="example-dynamic-font__elfontsize"></span>
                   </p>
                </div>
-<div class="env-dynamic-font env-dynamic-font--scale-1_875">
+               <div class="env-dynamic-font env-dynamic-font--scale-1_875">
                   <p class="env-text">
                      Scaling factor 1.875
                      <span class="example-dynamic-font__elfontsize"></span>
                   </p>
                </div>
-            
-<div class="env-dynamic-font env-dynamic-font--scale-2">
+
+               <div class="env-dynamic-font env-dynamic-font--scale-2">
                   <p class="env-text">
                      Scaling factor 2
                      <span class="example-dynamic-font__elfontsize"></span>
                   </p>
                </div>
+            </div>
          </div>
-</div>
          <p class="example-dynamic-font__resizeable__help">
             Resize container (<span class="example-dynamic-font__width"></span>px)
             <span class="example-dynamic-font__resizeable__help__arrow">&rarr;</span>
          </p>
       </div>
+
    </div>
 </div>
 
@@ -8634,7 +8669,7 @@ _Note that dot is replaced by underscore as dot is not allowed in CSS class name
 </div>
 ```
 
-### Scaling width boundaries <span id="dynamic-font-width-boundaries" class="offset-anchor"></span>
+### Scaling width boundaries
 
 The scaling will occur between two set widths. If the container width is smaller than the from-value,
 the scaling will be set to the lowest possible value and vice versa for the to-value.
@@ -8652,26 +8687,26 @@ alt="Dynamic font scaling chart"
 src="/placeholders/examples/dyn-font.svg" />
 
 <div class="example-dynamic-font-wrapper">
-   <div class="example-dynamic-font env-m-bottom--large">
+   <div class="example-dynamic-font env-m-block-end--large">
       <div class="example-dynamic-font__resizeable">
          <div class="env-container example-dynamic-container">
-            <div class="env-p-around--medium">
+            <div class="env-p--medium">
                <h2 class="env-ui-text-sectionheading">
                   Boundaries
                </h2>
-               <div class="env-dynamic-font env-dynamic-font--from-250 env-dynamic-font--to-500 env-m-vertical--small">
+               <div class="env-dynamic-font env-dynamic-font--from-250 env-dynamic-font--to-500 env-m-block--small">
                   <p class="env-text">
                      From 250 to 500
                      <span class="example-dynamic-font__elfontsize"></span>
                   </p>
                </div>
-               <div class="env-dynamic-font env-dynamic-font--from-400 env-dynamic-font--to-650 env-m-vertical--small">
+               <div class="env-dynamic-font env-dynamic-font--from-400 env-dynamic-font--to-650 env-m-block--small">
                   <p class="env-text">
                      From 400 to 650
                      <span class="example-dynamic-font__elfontsize"></span>
                   </p>
                </div>
-               <div class="env-dynamic-font env-dynamic-font--from-550 env-dynamic-font--to-800 env-m-vertical--small">
+               <div class="env-dynamic-font env-dynamic-font--from-550 env-dynamic-font--to-800 env-m-block--small">
                   <p class="env-text">
                      From 550 to 800
                      <span class="example-dynamic-font__elfontsize"></span>
@@ -8697,7 +8732,7 @@ src="/placeholders/examples/dyn-font.svg" />
 </div>
 ```
 
-Note: When using [Envision for Dashboard Widgets](/dashboard/widget-typography/#dynamic-font-size),
+Note: When using [Envision for Dashboard Widgets](/dashboard/widget-typography/#dynamic-font-size-in-widgets),
 there are additional widget specific boundaries available.
 
 ### Downscaling
@@ -8707,35 +8742,37 @@ the modifier `env-dynamic-font--downscale`. The lowest factor will then be `1 / 
 at default settings.
 
 <div class="example-dynamic-font-wrapper">
-   <div class="example-dynamic-font env-m-bottom--large">
+   <div class="example-dynamic-font env-m-block-end--large">
       <div class="example-dynamic-font__resizeable">
          <div class="env-container example-dynamic-container">
-            <div class="env-p-around--medium">
+            <div class="env-p--medium">
                <h2 class="env-ui-text-sectionheading">
                   Upscaling vs downscaling
                </h2>
-               <div class="env-dynamic-font env-m-vertical--small">
+               <div class="env-dynamic-font env-m-block--small">
                   <p class="env-text">
                      Upscaling factor 1.25 (default)
                      <span class="example-dynamic-font__elfontsize"></span>
                   </p>
                </div>
-<div class="env-dynamic-font env-dynamic-font--scale-2 env-m-vertical--small">
-<p class="env-text">
+               <div class="env-dynamic-font env-dynamic-font--scale-2 env-m-block--small">
+                  <p class="env-text">
                      Upscaling factor 2
                      <span class="example-dynamic-font__elfontsize"></span>
-                  </p></div>
-               <div class="env-dynamic-font env-dynamic-font--downscale env-m-vertical--small">
+                  </p>
+               </div>
+               <div class="env-dynamic-font env-dynamic-font--downscale env-m-block--small">
                   <p class="env-text">
                      Downscaling factor 1.25
                      <span class="example-dynamic-font__elfontsize"></span>
                   </p>
                </div>
-<div class="env-dynamic-font env-dynamic-font--scale-2 env-dynamic-font--downscale env-m-vertical--small">
-<p class="env-text">
+               <div class="env-dynamic-font env-dynamic-font--scale-2 env-dynamic-font--downscale env-m-block--small">
+                  <p class="env-text">
                      Downscaling factor 2
                      <span class="example-dynamic-font__elfontsize"></span>
-                  </p></div>
+                  </p>
+               </div>
             </div>
          </div>
          <p class="example-dynamic-font__resizeable__help">
@@ -8799,7 +8836,7 @@ Text lists are used for ordered and unordered lists in text content.
 
 The class `env-text-list` is used to style both types of lists and must be applied to the `<ul>` or `<ol>` element.
 
-List style, paddings and margins may be customized [using the text list variables](/utils/css-variables/#text-list-variables).
+List style, paddings and margins may be customized [using the text list variables](/utils/css-variables/#text-lists).
 
 Nested lists do not get top or bottom margins, to prevent extra spacing inside the list.
 
@@ -9067,7 +9104,7 @@ New UI Text style Body available since <span class="doc-badge doc-badge--info">2
 ## Usage example
 
 <div class="env-theme-example-brand">
-<div class="env-popover example-static-popover env-m-vertical--large" data-popper-placement="top">
+<div class="env-popover example-static-popover env-m-block--large" data-popper-placement="top">
    <div class="env-popover__arrow"></div>
    <div class="env-popover__content">
       <h4 class="env-ui-text-sectionheading env-popover__header__title">Section heading</h4>
@@ -9299,9 +9336,7 @@ Valid values for `{name}` are: `heading-01` – `heading-06`, `display-01` – `
 
 Valid values for `{name}` are: `overline`, `heading`, `sectionheading`, `subheading`, `caption`.
 
-<span id="text-list-variables" class="offset-anchor"></span>
-
-#### Text lists <span class="doc-badge doc-badge--info">2025.09.1</span>
+#### Text lists <span id="text-lists"></span><span class="doc-badge doc-badge--info">2025.09.1</span>
 
 - `--env-text-list-ul-style-type`
 - `--env-text-list-ol-style-type`
@@ -9603,12 +9638,12 @@ Examples
 
 ```html
 <div class="example-display">
-   <div class="env-p-around--x-small env-d--inline">Inline</div>
-   <div class="env-p-around--x-small env-d--block">Block</div>
-   <div class="env-p-around--x-small env-d--inline-block">Inline block</div>
-   <div class="env-p-around--x-small env-d--flex">Flex</div>
-   <div class="env-p-around--x-small env-d--inline-flex">Inline flex</div>
-   <div class="env-p-around--x-small env-d--none">None</div>
+   <div class="env-p--x-small env-d--inline">Inline</div>
+   <div class="env-p--x-small env-d--block">Block</div>
+   <div class="env-p--x-small env-d--inline-block">Inline block</div>
+   <div class="env-p--x-small env-d--flex">Flex</div>
+   <div class="env-p--x-small env-d--inline-flex">Inline flex</div>
+   <div class="env-p--x-small env-d--none">None</div>
 </div>
 ```
 
@@ -9706,7 +9741,7 @@ URL: https://envisionui.io/utils/spacing/
 Description: The Spacing utility provides classes for consistent margin and padding adjustments across elements.
 
 The spacing utility was updated in **2026.01.2** to support logical properties alongside physical ones.
-See the [logical properties example](/utils/spacing/#logical-properties).
+See the [logical properties example](/utils/spacing/#logical-properties-example).
 
 The custom specifiers `horizontal`, `vertical`, and `around` are deprecated.
 See [Deprecated](/utils/spacing/#deprecated) for details.
@@ -9823,8 +9858,6 @@ Example:
       </div>
    </div>
 </div>
-
-<span id="logical-properties" class="offset-anchor"></span>
 
 ## Logical properties example
 
